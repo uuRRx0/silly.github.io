@@ -183,8 +183,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-03-31 15:08:43" itemprop="dateCreated datePublished" datetime="2020-03-31T15:08:43+08:00">2020-03-31</time>
+              <time title="创建时间：2020-03-31 15:08:43 / 修改时间：15:17:59" itemprop="dateCreated datePublished" datetime="2020-03-31T15:08:43+08:00">2020-03-31</time>
             </span>
 
           
@@ -199,27 +200,27 @@
 
       
           <h4 id="知识点总结"><a href="#知识点总结" class="headerlink" title="知识点总结"></a>知识点总结</h4><ol>
-<li>技术 Ajax 第一次提出是 <strong>2005</strong> 年，全名为 <strong>Asynchronous JavaScript and XML</strong> 。</li>
-<li>由 <strong><strong>Jesse James Garrett</strong></strong> 提出 Ajax 的从此<strong>改变了人们与 Web 的“单击，等待”的交互模式。</strong></li>
-<li>Ajax 技术的核心是 <strong>XMLHttpRequest 对象（简称XHR）</strong>，在 XHR 出现之前通过其他 hack 手段实现的。比如通过 Java applet 或者 Flash 等中间层向服务器发送请求。</li>
-<li>早在 <strong>1998</strong> 年就有人采用不同的手段实现与服务器的异步通信，Ajax 技术提出前被称为<strong>远程脚本（remote scripting）</strong>。</li>
-<li><strong>XML 可扩展标记语言（全名：Extensible Markup Language）</strong>是一种标记语言。它被设计用来传送及携带数据信息，用于与服务器通信，和 Ajax 并没有必要的关系，<strong>由于 XML 文件格式文件庞大, 格式复杂, 传输占用带宽缺点，现在已被 JSON 代替</strong>。</li>
-<li>第一款引入 XHR 对象的浏览器是微软的 IE5，通过 MSXML 库中的一个 <strong>ActiveX</strong> 对象实现的。</li>
-<li>使用 XHR 对象时，要调用第一个方法是 open()，它接受三个参数：<strong>请求类型、请求的 URL 和表示是否异步的布尔值</strong>。</li>
+<li>技术 Ajax 第一次提出是 2005 年，全名为 Asynchronous JavaScript and XML 。</li>
+<li>由 Jesse James Garrett 提出 Ajax 的从此改变了人们与 Web 的“单击，等待”的交互模式。</li>
+<li>Ajax 技术的核心是 XMLHttpRequest 对象（简称XHR），在 XHR 出现之前通过其他 hack 手段实现的。比如通过 Java applet 或者 Flash 等中间层向服务器发送请求。</li>
+<li>早在 1998 年就有人采用不同的手段实现与服务器的异步通信，Ajax 技术提出前被称为远程脚本（remote scripting）。</li>
+<li>XML 可扩展标记语言（全名：Extensible Markup Language）是一种标记语言。它被设计用来传送及携带数据信息，用于与服务器通信，和 Ajax 并没有必要的关系，由于 XML 文件格式文件庞大, 格式复杂, 传输占用带宽缺点，现在已被 JSON 代替。</li>
+<li>第一款引入 XHR 对象的浏览器是微软的 IE5，通过 MSXML 库中的一个 ActiveX 对象实现的。</li>
+<li>使用 XHR 对象时，要调用第一个方法是 open()，它接受三个参数：请求类型、请求的 URL 和表示是否异步的布尔值。</li>
 <li>open() 只是启动了一个发送请求以备发送，参数 URL 可以是相对路径、或绝对路径。</li>
 <li>发送请求的方法是 send()，它接受一个参数，作为请求主体的发送数据。</li>
-<li>send() 发送后，在服务器响应后，响应数据会填充到 XHR 对象的属性中：<strong>responseText（响应主体返回的文本）、response XML（XML DOM 文档）、status（响应的 HTTP 状态码）、statusText（HTTP 状态的说明）</strong>。    </li>
-<li>收到响应后先检查 ststus 属性，<strong>200 成功、304 未修改可用缓存的</strong>。</li>
-<li>在异步请求中，需要通过 <strong>onreadystatechange</strong> 方法对 XHR 对象的 <strong>readyStste</strong> 属性检测来判断响应是否完成。<strong>为了兼容浏览器，该方法最好在 open() 之前指定，且使用 XHR 直接检测属性而不是 this 代替</strong>。</li>
-<li><strong>readyState</strong> 可取的值如下。<ul>
+<li>send() 发送后，在服务器响应后，响应数据会填充到 XHR 对象的属性中：responseText（响应主体返回的文本）、response XML（XML DOM 文档）、status（响应的 HTTP 状态码）、statusText（HTTP 状态的说明）。    </li>
+<li>收到响应后先检查 ststus 属性，200 成功、304 未修改可用缓存的。</li>
+<li>在异步请求中，需要通过 onreadystatechange 方法对 XHR 对象的 readyStste 属性检测来判断响应是否完成。为了兼容浏览器，该方法最好在 open() 之前指定，且使用 XHR 直接检测属性而不是 this 代替。</li>
+<li>readyState 可取的值如下。<ul>
 <li>0：未初始化。尚未调用 open() 方法。</li>
-<li>1：启动。已经调用 open() 方法，但未调用 send()** 方法。</li>
+<li>1：启动。已经调用 open() 方法，但未调用 send() 方法。</li>
 <li>2：发送。已经调用 send() 方法，但未接受到响应。</li>
 <li>3：接受。已经接受到部分响应数据。</li>
 <li>4：完成。已接收全部数据。可在客户端使用了。</li>
 </ul>
 </li>
-<li>在接受<strong>响应前</strong>可以使用 <strong>abort()</strong> 方法来<strong>取消异步请求</strong>。不建议之后重用，且应当解引用 XHR 对象。</li>
+<li>在接受响应前可以使用 abort() 方法来取消异步请求。不建议之后重用，且应当解引用 XHR 对象。</li>
 </ol>
 
       
