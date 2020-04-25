@@ -1,0 +1,143 @@
+.page .contact-main {
+  max-width: 1920px;
+  margin: auto;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.page .contact-main .form {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.page .contact-main .form .company-info,
+.page .contact-main .form .f-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 3.2vw;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  position: relative;
+}
+.page .contact-main .form .company-info h3,
+.page .contact-main .form .f-card h3 {
+  color: #A16378;
+}
+.page .contact-main .form .f-card {
+  margin-right: 6.4vw;
+  width: 30%;
+  max-width: 400px;
+}
+.page .contact-main .form .f-card form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.page .contact-main .form .f-card form .form-control {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #A16378;
+}
+.page .contact-main .form .f-card form .form-control:focus {
+  box-shadow: 0 0rem 0rem 0.2rem transparent;
+}
+.page .contact-main .form .f-card form button {
+  border: 1.125px solid #A16378;
+  background-color: transparent;
+  color: #A16378;
+  justify-self: end;
+  padding: 0.625vw 1.875vw;
+}
+.page .contact-main .form .f-card form button:focus {
+  box-shadow: 0 0rem 0rem 0.2rem transparent;
+}
+.page .contact-main .form .f-card form button:hover {
+  background-color: #A16378;
+  color: #fff;
+}
+.page .contact-main .form .company-info {
+  width: 28%;
+  max-width: 360px;
+}
+.page .contact-main .form .company-info p a img {
+  height: 22px;
+  margin-right: 0.375rem;
+}
+@media only screen and (max-width: 1024px) {
+  .page .contact-main .form .f-card {
+    width: 307px;
+  }
+  .page .contact-main .form .company-info {
+    width: 286px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page .contact-main {
+    overflow: auto;
+  }
+  .page .contact-main .content {
+    left: 6.4vw;
+    right: 6.4vw;
+    position: absolute;
+    overflow: auto;
+    width: 87.2vw;
+    height: 100vh;
+  }
+  .page .contact-main .content .form {
+    justify-content: center;
+    min-width: 615px;
+    overflow: auto;
+  }
+  .page .contact-main .content .form .f-card {
+    width: 307px;
+    padding: 2rem;
+  }
+  .page .contact-main .content .form .company-info {
+    padding: 2rem;
+    height: 351px;
+  }
+  .page .contact-main .content .form .company-info h5 {
+    padding-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .page .contact-main {
+    overflow: auto;
+  }
+  .page .contact-main .content {
+    left: 6.4vw;
+    position: absolute;
+    overflow: auto;
+    width: 87.2vw;
+    height: 100vh;
+  }
+  .page .contact-main .content .form {
+    justify-content: flex-start;
+    min-width: 480px;
+    overflow: auto;
+  }
+  .page .contact-main .content .form .f-card {
+    width: 240px;
+    height: 340px;
+    margin-right: 3.2vw;
+    padding: 1.5rem;
+  }
+  .page .contact-main .content .form .company-info {
+    padding: 1.5rem;
+    height: 340px;
+    width: 240px;
+  }
+  .page .contact-main .content .form .company-info h5 {
+    padding-top: 0.5rem;
+  }
+}
